@@ -44,7 +44,6 @@ case $Random in
 esac
 
 }
-
 empWagecomputation ;
 
 TotalWorkinghrs=$(( $EmployeeWage*100 ))
