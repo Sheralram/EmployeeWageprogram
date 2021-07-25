@@ -7,6 +7,7 @@ isParttime=2
 isabsent=0
 Wageperhour=20
 WorkingDayperMonth=20 
+TotalWorkinghrsperMonth=100
 Random=$((RANDOM%3))
 echo $Random
    if [ $Random -eq 1 ]
@@ -17,11 +18,12 @@ then
   elif [ $Random -eq 2 ]
 then
 	echo "Employee is Parttime Present"
-	EmployeeWage=$((8*20*20))
+	EmployeeWage=$((4*20*20))
 	echo "The Parttime Employee Wage is" $EmployeeWage
 else
 	echo "Employee is absent "
-	echo "EmployeeWage is Zero"
+	EmployeeWage=0
+	echo "EmployeeWage is " $EmployeeWage
  fi 
 
 case $Random in
@@ -31,11 +33,14 @@ case $Random in
 		echo "Employee Full time Present wage is"$EmployeeWage
 			;;
          2) echo "Employee is Parttime Present "
-                EmployeeWage=$((8*20*20))
+                EmployeeWage=$((4*20*20))
                 echo "Employee Part time Present wage is"$EmployeeWage
 				;;
 	*) echo "Employee is absent"
-		echo "Salary is Zero"
+	EmployeeWage=0
+        echo "EmployeeWage is " $EmployeeWage
 esac
 
 
+TotalWorkinghrs=$(( $EmployeeWage*100 ))
+echo "Total Working Hours for a month is " $TotalWorkinghrs
