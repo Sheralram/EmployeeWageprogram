@@ -43,4 +43,4 @@ esac
 
 
 TotalWorkinghrs=$(( $EmployeeWage*100 ))
-echo "Total Working Hours for a month is " $TotalWorkinghrs
+echo " Wages for Total Working Hours of a month is " $TotalWorkinghrs
