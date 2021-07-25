@@ -2,6 +2,8 @@
 
 echo "Welcome to Employee Wage Computation Program"
 
+function  empWagecomputation()
+{
 isPresentFulltime=1
 isParttime=2
 isabsent=0
@@ -41,6 +43,13 @@ case $Random in
         echo "EmployeeWage is " $EmployeeWage
 esac
 
+}
+
+empWagecomputation ;
 
 TotalWorkinghrs=$(( $EmployeeWage*100 ))
 echo " Wages for Total Working Hours of a month is " $TotalWorkinghrs
+
+
+
+
