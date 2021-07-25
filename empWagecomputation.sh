@@ -31,11 +31,11 @@ else
 case $Random in
 
 	1) echo "Employee is Full time Present "
-		EmployeeWage=$((8*20*20))
+		EmployeeWage=$((8*20))
 		echo "Employee Full time Present wage is"$EmployeeWage
 			;;
          2) echo "Employee is Parttime Present "
-                EmployeeWage=$((4*20*20))
+                EmployeeWage=$((4*20))
                 echo "Employee Part time Present wage is"$EmployeeWage
 				;;
 	*) echo "Employee is absent"
@@ -51,5 +51,9 @@ TotalWorkinghrs=$(( $EmployeeWage*100 ))
 echo " Wages for Total Working Hours of a month is " $TotalWorkinghrs
 
 
+echo "The Daily wage is"$EmployeeWage
+TotalWage=$(($EmployeeWage*20))
+echo "The Total Wage is " $TotalWage
+echo "The Daily wage is $EmployeeWage AND The Total Wage is $TotalWage "
 
 
